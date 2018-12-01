@@ -19,8 +19,6 @@ class App extends Component {
     return (
         <div>
             <FormPet></FormPet>
-            <br></br>
-            <ListPets obj={testObj}></ListPets>
         </div>
     );
   }
