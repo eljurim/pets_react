@@ -6,9 +6,19 @@ import './App.css';
 
 class App extends Component {
   render() {
+    const testObj = {
+      "breed": "Boxer",
+      "checkIn": "2018-09-21",
+      "checkOut": "2018-12-12",
+      "diagnosis": "TBD",
+      "name": "Cheeka",
+      "owner": "Manuel",
+      "symptoms": "Hongos en la piel"
+  }
+
     return (
         <div>
-            <ListPets></ListPets>
+            <FormPet></FormPet>
         </div>
     );
   }
