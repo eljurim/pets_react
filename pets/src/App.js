@@ -5,7 +5,47 @@ import ListPets from './components/listPets/listPets'
 import './App.css';
 
 class App extends Component {
+constructor(props){
+  super(props)
+  this.state = {
+    perros:[]
+  }
+}
+
+
+componentDidMount(){
+  
+    fetch('https://react-test-22eeb.firebaseio.com/pets.json').then((res)=>{
+      return res.json()
+    }).then((json)=>{
+      // console.log(arrayHTML)
+      this.setState({
+        perros: json
+      })
+
+    })
+}
+
+
   render() {
+    // iterar el state
+    console.log(this.state.perros)
+for(let i in this.state.perros){
+  console.log(i, this.state.perros[i])
+}
+
+   const dogs = this.state.perros.map((currentValue)=>{
+     return(`<tr>
+      <th scope="row">1</th>
+      <td>${currentValue.name}</td>
+      <td>${currentValue.breed}</td>
+      <td>${currentValue.owner}</td>
+      <td>${currentValue.checkIn}</td>
+  </tr>
+       
+     `);
+   });
+
     const testObj = {
       "breed": "Boxer",
       "checkIn": "2018-09-21",
@@ -18,7 +58,7 @@ class App extends Component {
 
     return (
         <div>
-            <ListPets obj={testObj}></ListPets>
+            {dogs}
         </div>
     );
   }
