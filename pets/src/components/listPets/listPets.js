@@ -3,6 +3,24 @@ import React, { Component } from 'react';
 import './listPets.css';
 
 class ListPets extends Component {
+    constructor(props){
+        const { breed, checkIn, checkOut, diagnosis, name, owner, symptoms } = props.obj
+        super(props)
+        this.state = {
+          breed:breed,
+          checkIn:checkIn,
+          checkOut:checkOut,
+          diagnosis:diagnosis,
+          name:name,
+          owner:owner,
+          symptoms:symptoms
+        }
+
+        // this.changeLook = this.changeLook.bind(this)
+        // this.changeState = this.changeState.bind(this)
+      }
+
+      
   render() {
     return (
       <div className="ListPets">
@@ -19,17 +37,10 @@ class ListPets extends Component {
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Cheeka</td>
-                    <td>Boxer</td>
-                    <td>Manuel</td>
-                    <td>2018-10-11</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Maqui</td>
-                    <td>Cacri</td>
-                    <td>Santiago</td>
-                    <td>2018-12-12</td>
+                    <td>{this.state.name}</td>
+                    <td>{this.state.breed}</td>
+                    <td>{this.state.owner}</td>
+                    <td>{this.state.checkIn}</td>
                 </tr>
             </tbody>
             </table>
