@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import FormPet from './components/formPet/formPet';
 import './App.css';
+import './js/bootstrap'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <div>
             <FormPet></FormPet>
         </div>
+        <script></script>
     );
   }
 }
