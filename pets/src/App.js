@@ -47,7 +47,6 @@ componentDidMount(){
                     </tr>
                 </thead>
 
-
       <ListPets dogs={this.state.dogs} />
 
         </table>
