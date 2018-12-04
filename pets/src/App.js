@@ -4,6 +4,15 @@ import FormPet from './components/formPet/formPet';
 import ListPets from './components/listPets/listPets'
 import './App.css';
 
+
+// Icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel, faDog } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStroopwafel, faDog)
+
+
 class App extends Component {
 constructor(props){
   super(props)
@@ -42,7 +51,7 @@ for(let i in this.state.perros){
       <td>${currentValue.owner}</td>
       <td>${currentValue.checkIn}</td>
   </tr>
-       
+       <FontAwesomeIcon icon='dog' size='2x'/>
      `);
    });
 
