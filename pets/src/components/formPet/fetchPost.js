@@ -16,4 +16,4 @@ const addNewEntry = (obj) => {
 
 }
 
-export default addNewEntry;
+export default addNewEntry
