@@ -36,8 +36,8 @@ componentDidMount(){
   render() {
     return (
       <div>  
-      <table class="table">
-                <thead class="thead-dark">
+      <table className="table">
+                <thead className="thead-dark">
                     <tr>
                         <th scope="col"># ingreso</th>
                         <th scope="col">Nombre Mascota</th>
@@ -48,8 +48,12 @@ componentDidMount(){
                 </thead>
 
       <ListPets dogs={this.state.dogs} />
-
-        </table>
+      </table>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <FormPet></FormPet>
       <FontAwesomeIcon icon="dog"></FontAwesomeIcon>
       </div>
       
