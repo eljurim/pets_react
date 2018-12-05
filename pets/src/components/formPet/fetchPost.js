@@ -1,8 +1,9 @@
-const addNewEntry = (obj) => {
+const addNewEntry = (name='', breed='', owner='', checkIn='', symptoms='', diagnosis='TBD', checkOut='TBD') => {
 
     var url = 'https://react-test-22eeb.firebaseio.com/pets.json';
-    var data = obj;
 
+    var data = {name,breed,owner,checkIn,symptoms,diagnosis,checkOut}
+    
     fetch(url, {
         method: 'POST', // or 'PUT'
         body: JSON.stringify(data), // data can be `string` or {object}!

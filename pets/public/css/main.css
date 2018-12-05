@@ -4,3 +4,8 @@
 	border-radius: 10%;
 	padding-bottom: 50px;
 }
+
+body {
+	background: lightblue url("../img/dog-bone-wallpaper.jpg") repeat fixed center;
+	background-blend-mode: lighten;
+}
