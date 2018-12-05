@@ -24,9 +24,9 @@ componentDidMount(){
   fetch('https://react-test-22eeb.firebaseio.com/pets.json').then((res)=>{
         return res.json()
       }).then((json)=>{
-          console.log(Object.values(json))
+          console.log(Object.entries(json))
           this.setState({
-            dogs: Object.values(json)
+            dogs: Object.entries(json)
           })
       }) //cierre del fetch
   
@@ -36,10 +36,7 @@ componentDidMount(){
   render() {
     return (
       <div>  
-            <ListPets dogs={this.state.dogs} />
-
-              <FormPet></FormPet>
-      
+            <ListPets dogs={this.state.dogs} />      
       </div>
       
       

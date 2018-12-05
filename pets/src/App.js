@@ -28,9 +28,8 @@ componentDidMount(){
   fetch('https://react-test-22eeb.firebaseio.com/pets.json').then((res)=>{
         return res.json()
       }).then((json)=>{
-          console.log(Object.values(json))
           this.setState({
-            dogs: Object.values(json)
+            dogs: Object.entries(json)
           })
       }) //cierre del fetch
   
@@ -42,6 +41,9 @@ componentDidMount(){
       <div>  
             <Route path='/P1' exact component={P1} />  
             <Route path='/P2' exact component={P2} />  
+            <Route path='/list' exact component={FullPets} />
+            <Route path='/form' exact component={FormPet} />
+            
       </div>
       
       
