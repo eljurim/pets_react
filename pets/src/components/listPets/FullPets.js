@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 // import logo from './logo.svg';
-import FormPet from './components/formPet/formPet';
-import ListPets from './components/listPets/listPets'
-import FullPets from './components/listPets/FullPets'
-import './App.css';
+import FormPet from '../formPet/formPet';
+import ListPets from './listPets'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,7 +10,7 @@ import { faStroopwafel, faDog } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faStroopwafel, faDog)
 
-class App extends Component {
+class FullPets extends Component {
 constructor(props){
   super(props)
   this.state = {
@@ -38,7 +36,10 @@ componentDidMount(){
   render() {
     return (
       <div>  
-            <Route path='/' exact component={FullPets} />  
+            <ListPets dogs={this.state.dogs} />
+
+              <FormPet></FormPet>
+      
       </div>
       
       
@@ -58,4 +59,4 @@ componentDidMount(){
   }
 }
 
-export default App;
+export default FullPets;

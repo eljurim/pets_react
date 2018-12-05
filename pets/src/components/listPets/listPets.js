@@ -26,6 +26,16 @@ class ListPets extends Component {
   render() {
 
     return(
+        <table className="table">
+                <thead className="thead-dark">
+                    <tr>
+                        <th scope="col"># ingreso</th>
+                        <th scope="col">Nombre Mascota</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Dueño</th>
+                        <th scope="col">Fecha de Ingreso</th>
+                    </tr>
+                </thead>
         <tbody>
         {this.props.dogs.map((dog,index) => (
             
@@ -39,6 +49,7 @@ class ListPets extends Component {
                 )
         )}
         </tbody>
+        </table>
       )
 
 
