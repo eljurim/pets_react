@@ -1,6 +1,12 @@
 import React,{Component} from 'react';
 import './formPet.css';
+import addNewEntry  from './fetchPost.js'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel, faDog } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStroopwafel, faDog)
 
 class FormPet extends Component{
     constructor(props) {
@@ -14,9 +20,9 @@ class FormPet extends Component{
         let name = document.getElementsByClassName('name')[0].value
         let breed = document.getElementsByClassName('breed')[0].value
         let owner = document.getElementsByClassName('owner')[0].value
-        let checkin = document.getElementsByClassName('checkin')[0].value
-        let newEntryData = { name, breed, owner, checkin }
-        console.log(newEntryData)
+        let checkIn = document.getElementsByClassName('checkIn')[0].value
+        let symptoms = document.getElementsByClassName('symptoms')[0].value
+        addNewEntry(name,breed,owner,checkIn,symptoms)
     }
 
     render(){
@@ -37,11 +43,17 @@ class FormPet extends Component{
                             <input className='input owner' placeholder='Ingresa nombre del dueño'></input>
                         </div>
                         <div className='contenedor'>
-                            <label className='label'>Checkin: </label>
-                            <input className='input checkin' type='date' placeholder='Ingresa fecha de ingreso'></input>
+                            <label className='label'>Fecha de Ingreso: </label>
+                            <input className='input checkIn' type='date' placeholder='Ingresa fecha de ingreso'></input>
+                        </div>
+                        <div className='contenedor'>
+                            <label className='label'>Síntomas: </label>
+                            <input className='input symptoms' placeholder='Ingresa los síntomas'></input>
                         </div>
                         <div className='contenedor'><button className='boton' type='submit' onClick={this.handleForm}>Guardar</button></div>
-                    </div>                
+                        {<FontAwesomeIcon icon="dog" size='5x' className='dog'></FontAwesomeIcon>}
+                    </div>
+                
             </form>
         );
     }

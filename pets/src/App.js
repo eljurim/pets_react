@@ -47,14 +47,14 @@ componentDidMount(){
                     </tr>
                 </thead>
 
-      <ListPets dogs={this.state.dogs} />
+      {/* <ListPets dogs={this.state.dogs} /> */}
       </table>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
       <FormPet></FormPet>
-      <FontAwesomeIcon icon="dog"></FontAwesomeIcon>
+      
       </div>
       
       
