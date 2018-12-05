@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom'
 import FormPet from './components/formPet/formPet';
 import ListPets from './components/listPets/listPets'
 import FullPets from './components/listPets/FullPets'
+import P1 from './components/P1'
+import P2 from './components/P2'
 import './App.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -38,7 +40,8 @@ componentDidMount(){
   render() {
     return (
       <div>  
-            <Route path='/' exact component={FullPets} />  
+            <Route path='/P1' exact component={P1} />  
+            <Route path='/P2' exact component={P2} />  
       </div>
       
       
