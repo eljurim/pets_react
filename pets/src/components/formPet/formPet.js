@@ -28,7 +28,9 @@ class FormPet extends Component{
     render(){
         return(
             <form>
-                <div className='titulo'>Pets Form</div>
+
+                <div className='titulo'>Pets Form                                     {<FontAwesomeIcon icon="dog" size='2x' className='dog'></FontAwesomeIcon>}
+</div>
                     <div className='principal'>
                         <div className='contenedor'>
                             <label className='label'>Nombre de la Mascota: </label>
@@ -51,7 +53,6 @@ class FormPet extends Component{
                             <input className='input symptoms' placeholder='Ingresa los síntomas'></input>
                         </div>
                         <div className='contenedor'><button className='boton' type='submit' onClick={this.handleForm}>Guardar</button></div>
-                        {<FontAwesomeIcon icon="dog" size='5x' className='dog'></FontAwesomeIcon>}
                     </div>
                 
             </form>
